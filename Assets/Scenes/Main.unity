@@ -179,7 +179,7 @@ MonoBehaviour:
   m_ChildAlignment: 1
   m_Spacing: 10
   m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
@@ -197,6 +197,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerListItemPrefab: {fileID: 5486901889648981235, guid: 2488012607930bf458302582895d5a77,
+    type: 3}
+  maxPlayersMessagePrefab: {fileID: 1009723137863016294, guid: 8bf5a0b82d002f2459517dbf7e4f19ac,
     type: 3}
 --- !u!114 &8773640
 MonoBehaviour:
@@ -2501,7 +2503,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 8.3}
+  m_AnchoredPosition: {x: 0, y: 8.299988}
   m_SizeDelta: {x: -100, y: 50}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &2143631958

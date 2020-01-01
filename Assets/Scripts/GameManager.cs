@@ -24,6 +24,10 @@ public static class GameManager {
         players.Remove(p);
         Signals.PlayerRemoved();
     }
+
+    public static int GetPlayerIndex(Player p) {
+        return players.IndexOf(p);
+    }
 }
 
 

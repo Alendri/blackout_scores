@@ -6,7 +6,9 @@ public class MainMenu : MonoBehaviour {
     public GameObject addPanel;
 
     public void OnAddPlayerClick() {
-        addPanel.SetActive(true);
+        if (GameManager.GetPlayers().Count < 8) {
+            addPanel.SetActive(true);
+        }
     }
     public void OnAddPlayerCencel() {
         addPanel.SetActive(false);

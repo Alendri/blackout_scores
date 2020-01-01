@@ -9,6 +9,12 @@ public class Player {
     public int id { get; protected set; }
     public int icon_index { get; protected set; }
 
+    public int index {
+        get {
+            return GameManager.GetPlayerIndex(this);
+        }
+    }
+
 
     public Player(int id, int icon_index) {
         this.id = id;

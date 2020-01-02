@@ -4,8 +4,17 @@ using UnityEngine;
 
 public class RoundManager : MonoBehaviour {
     public CardAmountPanel cardAmountPanel;
-    public void StartRound() {
+
+    void Start() {
+        gameObject.SetActive(false);
+    }
+    public void InitRound() {
         gameObject.SetActive(true);
-        cardAmountPanel.Show(card_amt => Debug.Log("card amt: " + card_amt));
+        cardAmountPanel.Show(StartRound);
+    }
+
+    public void StartRound(int card_amt) {
+        Round r = new Round(card_amt);
+        GameManager.AddRound(r);
     }
 }

@@ -1,12 +1,14 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using UnityEngine;
 
 public static class GameManager {
     private static List<Player> players = new List<Player>();
     private static List<Sprite> icons = new List<Sprite>();
+    private static List<Round> rounds = new List<Round>();
 
-    public static List<Player> GetPlayers() {
-        return players;
+    public static ReadOnlyCollection<Player> GetPlayers() {
+        return new ReadOnlyCollection<Player>(players);
     }
     public static Sprite GetIcon(int index) {
         return icons[index];
@@ -27,6 +29,24 @@ public static class GameManager {
 
     public static int GetPlayerIndex(Player p) {
         return players.IndexOf(p);
+    }
+
+    public static void ResetRound() {
+        rounds = new List<Round>();
+    }
+
+    public static int roundCount { get { return rounds.Count; } }
+    public static void AddRound(Round r) {
+        rounds.Add(r);
+    }
+    public static Round GetRound(int index = -1) {
+        if (index == -1) {
+            index = rounds.Count - 1;
+        }
+        return rounds[index];
+    }
+    public static ReadOnlyCollection<Round> GetRounds() {
+        return new ReadOnlyCollection<Round>(rounds);
     }
 }
 

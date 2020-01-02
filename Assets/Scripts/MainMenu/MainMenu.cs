@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour {
     public GameObject addPanel;
+    public RoundManager roundManger;
 
     public void OnAddPlayerClick() {
         if (GameManager.GetPlayers().Count < 8) {
@@ -15,6 +16,6 @@ public class MainMenu : MonoBehaviour {
     }
 
     public void OnStartClick() {
-
+        roundManger.StartRound();
     }
 }
